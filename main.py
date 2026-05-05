@@ -9,7 +9,7 @@ from api.routers.vehiculos import router as router_vehiculos
 
 app = FastAPI(title="CargoTrack API")
 
-@app.event("startup")
+@app.on_event("startup")
 def on_startup():
     create_db_and_tables()
 
